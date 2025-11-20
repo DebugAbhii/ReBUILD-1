@@ -5,8 +5,37 @@
   <title>Gemini Multi-file Generator</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- INLINE LOGIN CSS (only added part) -->
+
 </head>
+
 <body>
+
+  <!-- LOGIN PAGE -->
+  <div id="login-box">
+    <div id="login-card">
+      <h2>Login</h2>
+      <input type="text" id="user" placeholder="Username" required>
+      <input type="password" id="pass" placeholder="Password" required>
+      <button onclick="validateLogin()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const u = document.getElementById("user").value;
+      const p = document.getElementById("pass").value;
+
+      if (u === "admin" && p === "1234") {
+        document.getElementById("login-box").style.display = "none";
+      } else {
+        alert("Invalid Login!");
+      }
+    }
+  </script>
+
+  <!-- Website Generator-->
   <main class="container">
     <h1>Gemini Multi-file Website Generator</h1>
 
@@ -36,3 +65,6 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+
+   
