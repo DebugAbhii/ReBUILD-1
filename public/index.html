@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Gemini Multi-file Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Gemini Multi-file Website Generator</h1>
+
+    <label for="prompt">Describe the website you want (short):</label>
+    <textarea id="prompt" rows="4" placeholder="e.g., simple landing page for a bakery with menu and contact form"></textarea>
+
+    <div class="controls">
+      <button id="generate">Generate</button>
+      <button id="download" disabled>Download ZIP</button>
+    </div>
+
+    <section>
+      <h2>Preview</h2>
+      <iframe id="preview" sandbox="allow-scripts allow-same-origin" title="preview"></iframe>
+    </section>
+
+    <details>
+      <summary>Generated files (raw)</summary>
+      <pre id="raw" style="white-space:pre-wrap; max-height:300px; overflow:auto;"></pre>
+    </details>
+
+    <footer>
+      <small>API key stays on the server. Review generated files before publishing.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
